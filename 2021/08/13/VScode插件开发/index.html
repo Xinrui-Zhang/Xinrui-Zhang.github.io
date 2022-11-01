@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>VScode插件开发 | Xinrui Zhang</title>
+
+  
+  <meta name="author" content="Xinrui Zhang">
+  
+
+  
+  <meta name="description" content="快速开始根据接下来的步骤，我们可以创建一个使用命令激活，输出 hello world 的插件
+
+安装 Yeoman 和 VS code generator
+1npm install -g yo generator-code
+
+脚手架——用于自动生成 VScode 插件模板项目
+
+生成模板项目
+1yo">
+  
+
+  
+  
+  <meta name="keywords" content="">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="VScode插件开发"/>
+
+  <meta property="og:site_name" content="Xinrui Zhang"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Xinrui Zhang" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Xinrui Zhang</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>VScode插件开发</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2021/08/13/VScode插件开发/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-08-13T07:31:47.000Z">
+          2021-08-13
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h1 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h1><p>根据接下来的步骤，我们可以创建一个使用命令激活，输出 hello world 的插件</p>
+<ol>
+<li><p>安装 Yeoman 和 VS code generator</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yo generator-code</span><br></pre></td></tr></table></figure>
+
+<p>脚手架——用于自动生成 VScode 插件模板项目</p>
+</li>
+<li><p>生成模板项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yo code</span><br></pre></td></tr></table></figure>
+
+<p>根据需要进行选择(若为首次尝试，可根据下列选项一路回车)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">? What <span class="built_in">type</span> of extension <span class="keyword">do</span> you want to create? New Extension (TypeScript)</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">? What<span class="string">&#x27;s the name of your extension? HelloWorld</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="string">## Press &lt;Enter&gt; to choose default for all options below ###</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">? What&#x27;</span>s the identifier of your extension? helloworld</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">? What<span class="string">&#x27;s the description of your extension? LEAVE BLANK</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">? Initialize a git repository? Yes</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">? Bundle the source code with webpack? No</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="string">? Which package manager to use? npm</span></span></span><br></pre></td></tr></table></figure></li>
+<li><p>运行<br>打开刚刚创建好的项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code ./helloworld</span><br></pre></td></tr></table></figure>
+
+<p>F5 运行项目调试</p>
+<ul>
+<li>此时将打开一个新的 VScode 窗口用于插件调试，用于调试的窗口标题栏会标注”[Extension Development Host]”便于区分</li>
+</ul>
+<p>⬆+command+P 打开命令搜索框，输入 hello world，运行相关命令</p>
+
+
+<p>在右下角看到弹出的通知框，即为命令运行成功，插件已激活</p>
+</li>
+</ol>
+<h1 id="模板项目解析"><a href="#模板项目解析" class="headerlink" title="模板项目解析"></a>模板项目解析</h1><p>根据上一节的步骤，我们成功创建了一个 VScode 插件，接下来，来看看这个项目中的结构与具体实现吧。</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .vscode</span><br><span class="line">│   ├── launch.json     // 插件加载和调试的配置</span><br><span class="line">│   └── tasks.json      // 配置TypeScript编译任务</span><br><span class="line">├── .gitignore          // 忽略构建输出和node_modules文件</span><br><span class="line">├── README.md           // 一个友好的插件文档</span><br><span class="line">├── src</span><br><span class="line">│   └── extension.ts    // 插件源代码</span><br><span class="line">├── package.json        // 插件配置清单</span><br><span class="line">├── tsconfig.json       // TypeScript配置</span><br></pre></td></tr></table></figure>
+
+<p>针对基本功能的开发，我们目前只需要关注<em>package.json</em>和<em>extension.ts</em>这两个文件，如果你对其他配置文件感兴趣，可以查看 VScode 的<a target="_blank" rel="noopener" href="https://code.visualstudio.com/api">官方文档</a> 和 TypeScript 的<a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/">官方使用手册</a>。</p>
+<h2 id="插件配置清单-package-json"><a href="#插件配置清单-package-json" class="headerlink" title="插件配置清单-package.json"></a>插件配置清单-package.json</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;helloworld&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;displayName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HelloWorld&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;engines&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;vscode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.58.0&quot;</span> <span class="comment">// 这里指定了插件运行所需的VScode版本</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;categories&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;Other&quot;</span> <span class="comment">// 插件类型(具体见下一节介绍)</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;activationEvents&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;onCommand:helloworld.helloWorld&quot;</span> <span class="comment">// 绑定激活事件</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./out/extension.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;contributes&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;commands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="comment">// 定义、发布命令helloworld.helloworld</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;helloworld.helloWorld&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Hello World&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;vscode:prepublish&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm run compile&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;compile&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tsc -p ./&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;watch&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tsc -watch -p ./&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pretest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm run compile &amp;&amp; npm run lint&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;eslint src --ext ts&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node ./out/test/runTest.js&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@types/vscode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.58.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/glob&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.1.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/mocha&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.2.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@types/node&quot;</span><span class="punctuation">:</span> <span class="string">&quot;14.x&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;eslint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.27.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@typescript-eslint/eslint-plugin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.26.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;@typescript-eslint/parser&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.26.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;glob&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.1.7&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mocha&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^8.4.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.3.2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;vscode-test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.5.2&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="源代码-extension-ts"><a href="#源代码-extension-ts" class="headerlink" title="源代码-extension.ts"></a>源代码-extension.ts</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// The module &#x27;vscode&#x27; contains the VS Code extensibility API</span></span><br><span class="line"><span class="comment">// Import the module and reference it with the alias vscode in your code below</span></span><br><span class="line"><span class="comment">// 引入VScode提供的API</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> vscode <span class="keyword">from</span> <span class="string">&quot;vscode&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// this method is called when your extension is activated</span></span><br><span class="line"><span class="comment">// your extension is activated the very first time the command is executed</span></span><br><span class="line"><span class="comment">// 当插件激活时执行此函数，激活条件即为package.json中注册的命令执行</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">activate</span>(<span class="params">context: vscode.ExtensionContext</span>) &#123;</span><br><span class="line">  <span class="comment">// Use the console to output diagnostic information (console.log) and errors (console.error)</span></span><br><span class="line">  <span class="comment">// This line of code will only be executed once when your extension is activated</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Congratulations, your extension &quot;helloworld&quot; is now active!&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// The command has been defined in the package.json file</span></span><br><span class="line">  <span class="comment">// Now provide the implementation of the command with registerCommand</span></span><br><span class="line">  <span class="comment">// The commandId parameter must match the command field in package.json</span></span><br><span class="line">  <span class="comment">// 将package.json中定义的命令与对应事件注册绑定</span></span><br><span class="line">  <span class="keyword">let</span> disposable = vscode.<span class="property">commands</span>.<span class="title function_">registerCommand</span>(<span class="string">&quot;helloworld.helloWorld&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// The code you place here will be executed every time your command is executed</span></span><br><span class="line">    <span class="comment">// Display a message box to the user</span></span><br><span class="line">    <span class="comment">// 在右下角显示通知框</span></span><br><span class="line">    vscode.<span class="property">window</span>.<span class="title function_">showInformationMessage</span>(<span class="string">&quot;Hello World from HelloWorld!&quot;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  context.<span class="property">subscriptions</span>.<span class="title function_">push</span>(disposable);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// this method is called when your extension is deactivated</span></span><br><span class="line"><span class="comment">// 在插件停用前执行</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">deactivate</span>(<span class="params"></span>) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后，让我们来梳理一下，首先你需要在 package.json 中定义你将用到的命令，并注册能够激活组件的命令，如：输入命令”hello world”、打开 JavaScript 文件、按下组合按键等；接下来，在 extension.ts 的 activate 函数中将你定义的命令与将插件激活后命令触发的函数绑定起来，并在 deactivate 函数中进行插件停用前的清除，这样就可以实现一个简单的插件啦～</p>
+<h1 id="插件功能"><a href="#插件功能" class="headerlink" title="插件功能"></a>插件功能</h1><p>上一节中，我们对 VScode 插件的结构进行了解析，几乎所有的插件都是根据这样的结构来进行开发的，本节中，我们将介绍 VScode 为哪些功能提供了可扩展的 API</p>
+
+
+<p>VScode 插件可提供的功能主要为以上五类：</p>
+<p>首先是通用的如选择文件、文件夹，收集用户输入，存储工作区或全局数据等基本的功能；</p>
+<p>其次是主题相关的，如源代码颜色设置，UI 主题设置，icon 图标设置等；</p>
+<p>第三是语言特性，分为声明式与程序式，声明式主要是文本编辑基础的特性，不包含代码逻辑，如括号匹配显示、自动缩进、语法高亮等，而程序式则需要结合程序语言逻辑，如悬停提示、跳转定义、格式化等；</p>
+<p>第四是工作台 UI 的扩展，可以增加右键菜单、状态栏、侧边栏、webview 等，具体对应关系见下图；</p>
+
+
+<p>最后，是调试相关的功能，可以利用 VScode 提供的调试功能或自己的调试功能来进行开发。</p>
+<p>以上仅为各类插件功能的概要介绍，具体的 API 见<a target="_blank" rel="noopener" href="https://code.visualstudio.com/api/references/vscode-api#working-with-extensions-articles">官方文档</a></p>
+<h1 id="VScode-命令系统"><a href="#VScode-命令系统" class="headerlink" title="VScode 命令系统"></a>VScode 命令系统</h1><p>VScode 是微软使用 electron 框架，100%TypeScript 语言开发的桌面端代码编辑器软件，我们能够依照规范自由添加插件，主要源于其平台/插件架构风格的设计，下面将对 VScode 的设计做简要介绍</p>
+
+
+<p>VScode 采用多进程架构，上图为简要展示，</p>
+<ul>
+<li>主进程：VSCode 的入口进程，负责如窗口管理、进程间通信、自动更新等全局任务</li>
+<li>渲染进程：负责一个 Web 页面的渲染</li>
+<li>插件宿主进程：每个插件的代码都会运行在一个独属于自己的 NodeJS 环境的宿主进程中，插件不允许访问 UI</li>
+<li>Debug 进程：Debugger 相比普通插件做了特殊化</li>
+<li>Search 进程：搜索是一类计算密集型的任务，单开进程保证软件整体体验与性能</li>
+</ul>
+
+
+<p>如上图，VScode 选取的命令系统相较网状的结构更为扁平，能够更加高效地进行功能的调用。</p>
+<h1 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h1><p>VScode 官方文档：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/api">https://code.visualstudio.com/api</a></p>
+<p>VScode 源码：<a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p>
+<p>TypeScript 官方文档：<a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/">https://www.typescriptlang.org/docs/</a></p>
+<p>TypeScript 类型体操：<a target="_blank" rel="noopener" href="https://github.com/type-challenges/type-challenges">https://github.com/type-challenges/type-challenges</a></p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2022 Xinrui Zhang
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
