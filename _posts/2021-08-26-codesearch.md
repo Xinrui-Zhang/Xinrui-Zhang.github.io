@@ -8,6 +8,8 @@ tags:
 mathjax: true
 ---
 
+本文将介绍一个根据功能检索代码的VSCode插件。
+
 # CodeSearch——代码检索插件
 
 ## 项目背景

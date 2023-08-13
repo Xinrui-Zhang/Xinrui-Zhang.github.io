@@ -8,6 +8,8 @@ tags:
 mathjax: true
 ---
 
+本文将介绍如何快速构建一个自己的VSCode插件，主要使用语言为TypeScript。
+
 # 快速开始
 
 根据接下来的步骤，我们可以创建一个使用命令激活，输出 hello world 的插件
