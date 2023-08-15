@@ -3,7 +3,7 @@ title: "Multi-scale Temporal Feature Fusion for Time-Limited Order Prediction"
 collection: publications
 permalink: /publications/2022-11-25-paper-multiscale
 date: 2022-11-25
-venue: 'China Conference on Wireless Sensor Networks 2022'
+venue: 'China Conference on Wireless Sensor Networks'
 paperurl: 'https://link.springer.com/chapter/10.1007/978-981-19-8350-4_11'
 citation: 'Wang, J., Zhou, X., Liu, Y., Zhang, X., & Wang, S. (2022, November). Multi-scale Temporal Feature Fusion for Time-Limited Order Prediction. In China Conference on Wireless Sensor Networks (pp. 132-144). Singapore: Springer Nature Singapore.'
 ---

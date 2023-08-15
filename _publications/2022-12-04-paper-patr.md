@@ -3,7 +3,7 @@ title: "PATR: Periodicity-Aware Trajectory Recovery for Express System via Seq2S
 collection: publications
 permalink: /publications/2022-12-04-paper-patr
 date: 2022-12-04
-venue: 'IEEE Globecom 2022'
+venue: 'IEEE Globecom'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10001476'
 citation: 'Zhang, X., Liang, X., Wang, H., Wang, S., & He, T. (2022, December). PATR: Periodicity-Aware Trajectory Recovery for Express System via Seq2Seq Model. In GLOBECOM 2022-2022 IEEE Global Communications Conference (pp. 486-491). IEEE.'
 ---
