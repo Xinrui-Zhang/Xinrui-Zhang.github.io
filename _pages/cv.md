@@ -16,7 +16,7 @@ redirect_from:
 - 2024.03-2027.12(expected) PhD, Southeast University, software engineering, Nanjing
 <!-- * Ph.D in Version Control Theory, GitHub University, 2018 (expected) -->
 
-# <!-- Work experience
+<!-- Work experience
 
 - Summer 2015: Research Assistant
 
@@ -29,7 +29,7 @@ redirect_from:
   - Duties included: Merging pull requests
   - Supervisor: Professor Hub -->
 
-# <!-- Skills
+<!-- Skills
 
 - Skill 1
 - Skill 2
